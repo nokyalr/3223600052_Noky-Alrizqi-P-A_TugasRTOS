@@ -15,21 +15,22 @@ Perangkat yang digunakan:
 ## Pemetaan pin (diagram.json)
 <img width="782" height="418" alt="image" src="https://github.com/user-attachments/assets/251c92ad-b1cf-4278-8113-a540d1f0a94f" />
 
-- LED1: GPIO2
-- LED2: GPIO4
-- LED3: GPIO5
-- BUTTON1: GPIO0 (INPUT_PULLUP)
-- BUTTON2: GPIO15 (INPUT_PULLUP)
-- BUZZER (PWM): GPIO13
-- OLED (I2C): SDA = GPIO21, SCL = GPIO22
-- POT (ADC): GPIO36 (ADC1 channel)
-- ENCODER A: GPIO18
-- ENCODER B: GPIO19
-- ENCODER BTN: GPIO23
-- STEPPER STEP: GPIO26
-- STEPPER DIR: GPIO25
-- STEPPER ENABLE: GPIO27
-- SERVO (PWM): GPIO14
+- LED1: GPIO10
+- LED2: GPIO11
+- LED3: GPIO12
+- BUTTON1: GPIO13 (INPUT_PULLUP)
+- BUTTON2: GPIO14 (INPUT_PULLUP)
+- BUZZER (PWM): GPIO3
+- OLED (I2C): SDA = GPIO8, SCL = GPIO9
+- POT (ADC): GPIO1 (ADC1 channel)
+- ENCODER CLK (A): GPIO6
+- ENCODER DT (B): GPIO7
+- ENCODER SW: GPIO5
+- STEPPER IN1 (A-): GPIO21
+- STEPPER IN2 (A+): GPIO39
+- STEPPER IN3 (B+): GPIO40
+- STEPPER IN3 (B-): GPIO38
+- SERVO (PWM): GPIO16
 
 ## Program (main.cpp)
 File program terdapat pada folder src -> main.cpp
