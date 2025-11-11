@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "TKB-52 Noky",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": 59.3, "left": -173.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "encoder1:CLK", "esp:2", "green", [ "v-76.8", "h172.8", "v76.98" ] ],
+    [ "encoder1:DT", "esp:3", "green", [ "h28.8", "v67.48" ] ],
+    [ "encoder1:SW", "esp:4", "green", [ "h19.2", "v-28.52" ] ],
+    [ "encoder1:VCC", "esp:3V3.1", "red", [ "h48", "v-66.62" ] ],
+    [ "encoder1:GND", "esp:GND.1", "black", [ "h9.6", "v125.78" ] ]
+  ],
+  "dependencies": {}
+}
