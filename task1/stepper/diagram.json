@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "TKB-52 Noky",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -34.79,
+      "left": -172.37,
+      "attrs": { "size": "17" }
+    },
+    { "type": "wokwi-a4988", "id": "drv1", "top": 158.4, "left": -177.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "drv1:GND.1", "esp:GND.1", "black", [ "v0" ] ],
+    [ "stepper1:A-", "drv1:2B", "green", [ "v0" ] ],
+    [ "stepper1:A+", "drv1:2A", "green", [ "v0" ] ],
+    [ "stepper1:B+", "drv1:1A", "green", [ "v0" ] ],
+    [ "stepper1:B-", "drv1:1B", "green", [ "v0" ] ],
+    [ "drv1:STEP", "esp:12", "green", [ "h-9.6", "v19.2", "h172.8", "v-47.82" ] ],
+    [ "drv1:DIR", "esp:13", "green", [ "h-19.2", "v19.2", "h172.8", "v-47.82" ] ],
+    [ "drv1:VDD", "esp:3V3.1", "red", [ "h67.35", "v-191.74" ] ],
+    [ "drv1:SLEEP", "drv1:RESET", "green", [ "h0" ] ],
+    [ "drv1:GND.2", "drv1:GND.1", "black", [ "h9.75", "v57.68" ] ],
+    [ "drv1:VMOT", "drv1:VDD", "red", [ "h67.35", "v0.08" ] ],
+    [ "esp:5", "drv1:ENABLE", "green", [ "h-197.08", "v95.82" ] ]
+  ],
+  "dependencies": {}
+}
