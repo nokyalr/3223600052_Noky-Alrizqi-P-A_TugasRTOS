@@ -45,12 +45,15 @@ Setiap task difokuskan pada penerapan konsep **FreeRTOS multitasking**, **dual-c
 ├── 📂 Task1
 │   ├── button
 |   ├── buzzer
-.
-.
+|   ├── encoder
+|   ├── led
+|   ├── oled
+|   ├── potentiometer
+|   ├── servo
+|   ├── stepper
 │   └── README.md
 ├── 📂 Task2
-│   └── README.md
-├── 📂 Task3
+│   ├── merge
 │   └── README.md
 └── 📄 README.md  ← (file ini)
 ```
