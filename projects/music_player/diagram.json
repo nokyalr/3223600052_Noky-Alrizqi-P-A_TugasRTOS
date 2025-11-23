@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "author": "TKB-52 Noky",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 36.2,
+      "left": -105.6,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 45.8,
+      "left": -144,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 185.54,
+      "left": -124.57,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 60,
+      "left": -94.2,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btn1:2.r", "esp:4", "green", [ "h0" ] ],
+    [ "btn2:2.r", "esp:5", "green", [ "h0" ] ],
+    [ "bz1:2", "esp:8", "green", [ "h47.6", "v-19.02" ] ],
+    [ "oled1:SDA", "esp:10", "green", [ "v0" ] ],
+    [ "oled1:SCL", "esp:11", "green", [ "v0" ] ],
+    [ "esp:3V3.1", "oled1:VCC", "red", [ "h-168.28", "v143.82", "h86.25" ] ],
+    [ "oled1:GND", "esp:GND.1", "black", [ "v-28.8", "h76.8", "v67.38" ] ],
+    [ "bz1:1", "oled1:GND", "black", [ "h-19.2", "v48" ] ],
+    [ "btn1:1.l", "btn2:1.l", "black", [ "h0" ] ],
+    [ "btn2:1.l", "bz1:1", "black", [ "h-9.6", "v96", "h86.4" ] ]
+  ],
+  "dependencies": {}
+}
