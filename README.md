@@ -42,6 +42,9 @@ Setiap task difokuskan pada penerapan konsep **FreeRTOS multitasking**, **dual-c
 ## 📁 Struktur Repositori
 
 ```
+├── 📂 Projects
+│   ├── music_player
+│   └── README.md
 ├── 📂 Task1
 │   ├── button
 |   ├── buzzer
