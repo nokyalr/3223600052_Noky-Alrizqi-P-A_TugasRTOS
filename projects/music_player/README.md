@@ -2,7 +2,7 @@
 
 ---
 
-## 🎯 Tujuan (disesuaikan)
+## 🎯 Tujuan
 
 1. Menjalankan dua **task** terpisah pada **dua core** ESP32-S3: satu untuk pemutaran musik (PlayerTask) dan satu untuk tampilan OLED (OledTask).
 2. Menggunakan **ISR** untuk tombol (dua tombol) dan mengirim perintah ke PlayerTask lewat **Queue**.
@@ -95,3 +95,5 @@ lib_deps =
 * OLED selalu diakses dengan mutex untuk menghindari kondisi balapan I2C.
 
 ---
+
+https://github.com/user-attachments/assets/5c9a5541-f502-4456-9705-cc73caaf3b6f
